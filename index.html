@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yash | Creative Developer</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="new.css">
+  <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
+
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+
+  <style>
+    #particles-js {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      top: 0;
+      left: 0;
+    }
+
+    .cursor {
+      width: 15px;
+      height: 15px;
+      background: #6C63FF;
+      border-radius: 50%;
+      position: fixed;
+      pointer-events: none;
+      z-index: 2000;
+      transition: transform 0.1s ease;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div id="particles-js"></div>
+  <div class="cursor"></div>
+
+  <header>
+    <img src="images/nav-logo-removebg-preview (1).png" alt="Logo">
+    <nav>
+      <a href="#about">About</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button id="theme-toggle">🌙</button>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-image" data-aos="zoom-in">
+        <img src="images/pro.png" alt="Yashvanth Profile Photo">
+      </div>
+
+      <div class="hero-text" data-aos="fade-left">
+        <h1>Hi, I'm <span>Yashvanth</span></h1>
+        <p><span id="typing"></span></p>
+        <a href="#projects" class="btn">View Projects</a>
+      </div>
+    </section>
+
+    <section id="about" data-aos="fade-up">
+      <h2>About Me</h2>
+      <div class="about-content">
+        <p class="intro-text">
+          I am a <strong>Creative Developer</strong> dedicated to building modern, responsive, and visually powerful web
+          experiences. I bridge the gap between technical logic and aesthetics.
+        </p>
+
+        <div class="hobby-grid">
+          <div class="hobby-card">
+            <h4>📸 Photography & Sketching</h4>
+            <p>Training my eye for composition, lighting, and design through manual sketches and a camera lens.</p>
+          </div>
+          <div class="hobby-card">
+            <h4>🎵 Music & Creativity</h4>
+            <p>The rhythmic fuel that keeps my ideas flowing while building complex digital interfaces.</p>
+          </div>
+        </div>
+
+        <p class="about-quote">
+          "Whether I'm capturing a moment through a lens or writing a clean line of code, my goal is the same: to create something meaningful."
+        </p>
+      </div>
+    </section>
+
+    <section id="gallery" data-aos="fade-up">
+      <h2>Creative Gallery</h2>
+      <div class="gallery-grid">
+        <div class="gallery-item"><img src="images/draw1.png" alt="Sketch 1"><div class="overlay"><span>🎨 Sketch 01</span></div></div>
+        <div class="gallery-item"><img src="images/draw2.png" alt="Sketch 2"><div class="overlay"><span>🎨 Sketch 02</span></div></div>
+        <div class="gallery-item"><img src="images/draw3.png" alt="Sketch 3"><div class="overlay"><span>🎨 Sketch 03</span></div></div>
+        <div class="gallery-item"><img src="images/pic1.jpg" alt="Photo 1"><div class="overlay"><span>📸 Photography 01</span></div></div>
+        <div class="gallery-item"><img src="images/pic2.jpg" alt="Photo 2"><div class="overlay"><span>📸 Photography 02</span></div></div>
+        <div class="gallery-item"><img src="images/pic3.jpg" alt="Photo 3"><div class="overlay"><span>📸 Photography 03</span></div></div>
+      </div>
+    </section>
+
+    <section id="skills" data-aos="fade-up">
+      <h2>Skills</h2>
+      <div class="skills-container">
+        <div class="skill">HTML</div>
+        <div class="skill">CSS</div>
+        <div class="skill">JavaScript</div>
+        <div class="skill">Responsive Design</div>
+        <div class="skill">UI/UX Basics</div>
+        <div class="skill">Photography</div>
+        <div class="skill">Sketching</div>
+        <div class="skill">Typewriting</div>
+      </div>
+    </section>
+
+    <section id="contact" data-aos="fade-up">
+      <h2>Contact Me</h2>
+      <div class="social-buttons" style="margin-bottom: 20px; display: flex; gap: 15px; justify-content: center;">
+          <a href="https://github.com/Yashvanth-2008" target="_blank" class="btn social-btn"><i class="fab fa-github"></i> GitHub</a>
+          <a href="https://instagram.com/its_yashvanth_08" target="_blank" class="btn social-btn"><i class="fab fa-instagram"></i> Instagram</a>
+      </div>
+      <form>
+        <input type="text" placeholder="Name" required>
+        <input type="email" placeholder="Email" required>
+        <textarea rows="4" placeholder="Message" required></textarea>
+        <button class="btn" type="submit">Send Message</button>
+      </form>
+    </section>
+
+  <div id="imageModal" class="modal">
+    <span class="close-modal">&times;</span>
+    <img class="modal-content" id="fullImage">
+    <div id="caption"></div>
+  </div>
+
+  <footer>
+    © 2026 Yash | All Rights Reserved
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 1000, once: true });
+
+    new Typed("#typing", {
+      strings: ["Creative Developer.", "UI/UX Enthusiast.", "Sketch Artist.", "Photographer."],
+      typeSpeed: 60, backSpeed: 40, loop: true
+    });
+
+    const toggle = document.getElementById("theme-toggle");
+    toggle.onclick = () => {
+      document.body.classList.toggle("light");
+      toggle.textContent = document.body.classList.contains("light") ? "☀️" : "🌙";
+    };
+
+    const cursor = document.querySelector(".cursor");
+    document.addEventListener("mousemove", e => {
+      cursor.style.left = e.clientX + "px";
+      cursor.style.top = e.clientY + "px";
+    });
+
+    particlesJS("particles-js", {
+      particles: {
+        number: { value: 60 },
+        size: { value: 3 },
+        color: { value: "#6C63FF" },
+        line_linked: { enable: true, color: "#6C63FF" }
+      },
+      interactivity: { events: { onhover: { enable: true, mode: "repulse" } } }
+    });
+
+    // Modal logic
+    const modal = document.getElementById("imageModal");
+    const modalImg = document.getElementById("fullImage");
+    const captionText = document.getElementById("caption");
+    document.querySelectorAll(".gallery-item").forEach(item => {
+      item.onclick = function() {
+        modal.style.display = "block";
+        modalImg.src = this.querySelector("img").src;
+        captionText.innerHTML = this.querySelector(".overlay span").innerHTML;
+      }
+    });
+    document.querySelector(".close-modal").onclick = () => modal.style.display = "none";
+    window.onclick = (e) => { if(e.target == modal) modal.style.display = "none"; }
+  </script>
+
+</body>
+</html>
